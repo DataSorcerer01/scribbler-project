@@ -1,0 +1,129 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffeedd;
+}
+
+/* Header styles */
+#header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#subheading {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.header-button {
+    background-color: #1e87f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Main container for posts */
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.post-card {
+    background-color: orange;
+    border: 1px solid #f8b639;
+    border-radius: 10px;
+    padding: 20px;
+    flex-basis: calc(50% - 10px); /* To make two posts per row */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.post-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-header p {
+    font-weight: bold;
+}
+
+.post-content p {
+    margin-bottom: 10px;
+}
+
+.delete-icon, .ellipsis-icon {
+    cursor: pointer;
+    color: gray;
+    font-size: 16px;
+}
+
+/* Delete Post Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-button {
+    margin: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: black;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .post-card {
+        flex-basis: 100%;
+    }
+}
+
+/* Rest of your modal styles */
